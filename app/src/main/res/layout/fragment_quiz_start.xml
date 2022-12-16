@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quizStartFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_pink"
+    tools:context=".ui.quiz.start.QuizStartFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardViewQuizStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_mustard"
+        android:layout_marginVertical="48dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/textHeaderQuizStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz"
+            android:textAllCaps="true"
+            android:textSize="50sp"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardViewQuizStart"
+            app:layout_constraintBottom_toTopOf="@+id/textQuizStart"/>
+
+        <TextView
+            android:id="@+id/textQuizStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_start_introduction"
+            android:textSize="20sp"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewQuizStart"
+            app:layout_constraintStart_toStartOf="@+id/cardViewQuizStart"
+            app:layout_constraintTop_toBottomOf="@+id/textHeaderQuizStart"
+            app:layout_constraintBottom_toTopOf="@+id/buttonQuizStart"
+            android:layout_marginBottom="24dp"
+            android:padding="48dp"/>
+
+        <Button
+            android:id="@+id/buttonQuizStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/start_quiz"
+            app:layout_constraintBottom_toBottomOf="@+id/cardViewQuizStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dictionaryFragment">
+
+    <fragment
+        android:id="@+id/dictionaryFragment"
+        android:name="com.menesdurak.squizd.ui.dictionary.list.DictionaryFragment"
+        android:label="fragment_dictionary"
+        tools:layout="@layout/fragment_dictionary" >
+        <action
+            android:id="@+id/action_dictionaryFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
+        <action
+            android:id="@+id/action_dictionaryFragment_to_updateWordFragment"
+            app:destination="@id/updateWordFragment" />
+        <action
+            android:id="@+id/action_dictionaryFragment_to_quizStartFragment2"
+            app:destination="@id/quizStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="com.menesdurak.squizd.ui.dictionary.add.AddWordFragment"
+        android:label="fragment_add_word"
+        tools:layout="@layout/fragment_add_word" >
+        <action
+            android:id="@+id/action_addWordFragment_to_dictionaryFragment"
+            app:destination="@id/dictionaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateWordFragment"
+        android:name="com.menesdurak.squizd.ui.dictionary.update.UpdateWordFragment"
+        android:label="fragment_update_word"
+        tools:layout="@layout/fragment_update_word" >
+        <action
+            android:id="@+id/action_updateWordFragment_to_dictionaryFragment"
+            app:destination="@id/dictionaryFragment" />
+        <argument
+            android:name="uid"
+            app:argType="integer" />
+        <argument
+            android:name="currentWord"
+            app:argType="com.menesdurak.squizd.data.model.Word" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizQuestionsFragment"
+        android:name="com.menesdurak.squizd.ui.quiz.questions.QuizQuestionsFragment"
+        android:label="fragment_quiz_questions"
+        tools:layout="@layout/fragment_quiz_questions" >
+        <action
+            android:id="@+id/action_quizQuestionsFragment_to_quizEndFragment"
+            app:destination="@id/quizEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizStartFragment"
+        android:name="com.menesdurak.squizd.ui.quiz.start.QuizStartFragment"
+        android:label="fragment_quiz_start"
+        tools:layout="@layout/fragment_quiz_start" >
+        <action
+            android:id="@+id/action_quizStartFragment2_to_dictionaryFragment"
+            app:destination="@id/dictionaryFragment" />
+        <action
+            android:id="@+id/action_quizStartFragment2_to_quizQuestionsFragment"
+            app:destination="@id/quizQuestionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizEndFragment"
+        android:name="com.menesdurak.squizd.ui.quiz.end.QuizEndFragment"
+        android:label="fragment_quiz_end"
+        tools:layout="@layout/fragment_quiz_end" >
+        <action
+            android:id="@+id/action_quizEndFragment_to_quizStartFragment2"
+            app:destination="@id/quizStartFragment" />
+        <argument
+            android:name="totalScore"
+            app:argType="integer" />
+        <argument
+            android:name="questionCount"
+            app:argType="integer" />
+    </fragment>
+</navigation>

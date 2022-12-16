@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dictionary.add.AddWordFragment"
+    android:background="@color/light_green"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etAddName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:maxLength="25"/>
+
+    <EditText
+        android:id="@+id/etAddMeaning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:hint="@string/meaning"
+        android:inputType="text"
+        android:maxLength="50"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"/>
+
+</LinearLayout>
