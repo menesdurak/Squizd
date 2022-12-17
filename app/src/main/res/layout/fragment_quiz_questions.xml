@@ -8,108 +8,113 @@
     android:background="@color/dark_pink"
     tools:context=".ui.quiz.questions.QuizQuestionsFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cardViewQuizStart"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/light_mustard"
-        android:layout_marginVertical="48dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_gravity="center">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textQuestion"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardViewQuizStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="2dp"
-            tools:text="Question"
-            android:textStyle="bold"
-            android:textSize="42sp"
-            android:gravity="center"
-            android:layout_margin="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/textAnswer1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cardViewQuizStart"
-            android:maxLines="1"/>
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="48dp"
+            android:background="@color/light_mustard">
 
-        <TextView
-            android:id="@+id/textAnswer1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="36dp"
-            android:textSize="20sp"
-            android:elevation="2dp"
-            tools:text="Answer1 Answer1Answer1 Answer1 Answer1 Answer1 Answer1 Answer1 Answer"
-            android:gravity="center"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textQuestion"
-            android:background="@drawable/answer_border"
-            android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/textQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textAnswer1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardViewQuizStart"
+                tools:text="Question" />
 
-        <TextView
-            android:id="@+id/textAnswer2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:layout_margin="16dp"
-            android:textSize="20sp"
-            android:elevation="2dp"
-            tools:text="Answer1 Answer1Answer1 Answer1 Answer1 Answer1 Answer1 Answer1 Answer"
-            android:gravity="center"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textAnswer1"
-            android:background="@drawable/answer_border"
-            android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/textAnswer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/answer_border"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+                tools:text="Answer1 Answer1Answer1 Answer1 Answer1 Answer1 Answer1 Answer1 Answer" />
 
-        <TextView
-            android:id="@+id/textAnswer3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:layout_margin="16dp"
-            android:textSize="20sp"
-            android:elevation="2dp"
-            tools:text="Answer1 Answer1Answer1 Answer1 Answer1 Answer1 Answer1 Answer1 Answer"
-            android:gravity="center"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textAnswer2"
-            android:background="@drawable/answer_border"
-            android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/textAnswer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/answer_border"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAnswer1"
+                tools:text="Answer1 Answer1Answer1 Answer1 Answer1 Answer1 Answer1 Answer1 Answer" />
 
-        <TextView
-            android:id="@+id/textAnswer4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:layout_margin="16dp"
-            android:padding="10dp"
-            android:textSize="20sp"
-            android:elevation="2dp"
-            tools:text="Answer1 Answer1Answer1 Answer1 Answer1 Answer1 Answer1 Answer1 Answer"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textAnswer3"
-            android:background="@drawable/answer_border"
-            android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/textAnswer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/answer_border"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAnswer2"
+                tools:text="Answer1 Answer1Answer1 Answer1 Answer1 Answer1 Answer1 Answer1 Answer" />
+
+            <TextView
+                android:id="@+id/textAnswer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/answer_border"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAnswer3"
+                tools:text="Answer1 Answer1Answer1 Answer1 Answer1 Answer1 Answer1 Answer1 Answer" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </ScrollView>
 
 </FrameLayout>
