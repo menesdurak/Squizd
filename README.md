@@ -13,3 +13,6 @@ Build a dictionary and test yourself
 - Coroutines
 - Navigation
 - RecyclerView
+
+Known Bugs:
+- After starting quiz and go back to dictionary, active tab don't change in bottom navigation view.
