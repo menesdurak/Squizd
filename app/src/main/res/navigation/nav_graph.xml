@@ -52,6 +52,9 @@
         <action
             android:id="@+id/action_quizQuestionsFragment_to_quizEndFragment"
             app:destination="@id/quizEndFragment" />
+        <action
+            android:id="@+id/action_quizQuestionsFragment_to_dictionaryFragment"
+            app:destination="@id/dictionaryFragment" />
     </fragment>
     <fragment
         android:id="@+id/quizStartFragment"
@@ -79,5 +82,8 @@
         <argument
             android:name="questionCount"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_quizEndFragment_to_dictionaryFragment"
+            app:destination="@id/dictionaryFragment" />
     </fragment>
 </navigation>
