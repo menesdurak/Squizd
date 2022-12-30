@@ -67,3 +67,4 @@ class DictionaryFragment : Fragment() {
         _binding = null
     }
 }
+

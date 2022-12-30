@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Squizd"
         tools:targetApi="33">
         <activity
+            android:name=".ui.SplashActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
